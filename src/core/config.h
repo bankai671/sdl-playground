@@ -1,0 +1,21 @@
+#pragma once
+
+#define GAME_WIDTH 640
+#define GAME_HEIGHT 480
+
+#define WINDOW_WIDTH 1280
+#define WINDOW_HEIGHT 720
+
+#define PLAYER_SPEED 500
+#define TILE_SIZE 32
+
+#define ROOM_MAX_WIDTH 64
+#define ROOM_MAX_HEIGHT 64
+
+#define MAX_ROOMS 24
+#define MAX_MARKERS 32
+#define MAX_DOORS 12
+#define MAX_ENTITIES 256
+
+#define MAX_INVENTORY_ITEMS 32
+#define MAX_QUICK_SLOTS 1
