@@ -2,11 +2,11 @@ CC = gcc
 
 CFLAGS = -Wall -Wextra -std=c11 \
 		 -I./src \
-         -I/opt/homebrew/include \
          $(shell pkg-config --cflags sdl2) \
 
 LDFLAGS = \
-         $(shell pkg-config --libs sdl2 | sed 's/-lSDL2main//') \
+         $(shell pkg-config --libs sdl2) \
+		 -lm 
 
 C_SRC = main.c \
 	  core/font.c \
@@ -31,7 +31,8 @@ C_SRCS = $(addprefix src/, $(C_SRC))
 OUT = ./build/main
 
 all:
-	$(CC) $(C_SRCS) -o $(OUT) $(CFLAGS) $(LDFLAGS)
+	mkdir -p ./build
+	$(CC) $(CFLAGS) $(C_SRCS) -o $(OUT) $(LDFLAGS)
 
 run: all
 	@clear

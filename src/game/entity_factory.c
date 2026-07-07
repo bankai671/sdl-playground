@@ -18,7 +18,7 @@ Entity make_player()
 		.x = 0,
 		.y = 0,
 		.w = 32,
-		.h = 32,
+        .h = 32,
 		.is_solid = false,
 	};
 
@@ -28,11 +28,11 @@ Entity make_player()
 		.hurtbox = hurtbox,
 		.attack_hitbox = attack_hitbox,
 	};
+    
+    PlayerData data = {0};
+    data.combat_data = combat_data;
 
-	*player_data = (PlayerData){
-		.combat_data = combat_data,
-		.inventory = {0},
-	};
+	*player_data = data;
 		
 	Collider c = {
 		.x = 0,
