@@ -1,5 +1,3 @@
-#include <stdlib.h>
-
 #include "item_db.h"
 #include "examine_system.h"
 #include "item_use_system.h"

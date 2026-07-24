@@ -2,7 +2,6 @@
 
 #include <SDL.h>
 
-#include <stdlib.h>
 #include <stdbool.h>
 
 #include "item_db.h"
